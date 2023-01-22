@@ -4,7 +4,8 @@
   "description": "this is an example of tailwind website",
   "main": "index.js",
   "scripts": {
-    "build:css": "postcss ./src/tailwind.css -o ./public/css/main.css"
+    "build:css": "postcss ./src/tailwind.css -o ./public/css/main.css",
+    "build": "NODE_ENV=production postcss ./src/tailwind.css -o ./public/css/main.css"
   },
   "repository": {
     "type": "git",
@@ -19,7 +20,10 @@
   "homepage": "https://github.com/juliannParra99/tailwindcss-website#readme",
   "devDependencies": {
     "autoprefixer": "^10.4.13",
-    "postcss": "^8.4.21",
     "tailwindcss": "^3.2.4"
+  },
+  "dependencies": {
+    "postcss-cli": "^10.1.0",
+    "win-node-env": "^0.6.1"
   }
 }
